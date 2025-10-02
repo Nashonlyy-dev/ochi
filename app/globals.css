@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+ 
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: FoundersGrotesk-Semibold (1);
+    background-color: #1a202c; /* Tailwind's bg-zinc-900 */
+    color: #fff; /* Tailwind's text-white */
+    
+}
+
+.img {
+  background-image: url(assets/ochi-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* .eye{
+  background-image:
+      url(assets/image.png)
+  
+} */
+
+/* entrance animation used by components to 'come down' into view */
+.animate-slide-down {
+  animation: slideDown 800ms cubic-bezier(.22,.98,.35,1) forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* loader fallback styles (in addition to tailwind classes used in Loader.jsx) */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader .animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
